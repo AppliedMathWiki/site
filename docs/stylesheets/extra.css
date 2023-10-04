@@ -2,8 +2,8 @@
 /* Light mode */
 [data-md-color-scheme="default"] {
 
-  --md-primary-bg-color: #ffffff;
-  --md-default-bg-color: #ffffff;
+  --md-primary-bg-color: #F5F5F5;
+  --md-default-bg-color: #F5F5F5;
   --md-primary-fg-color: #3498db;  
 
   --md-default-bg-color--light:    var(--md-primary-bg-color);
@@ -15,7 +15,7 @@
   --md-default-fg-color--lightest: var(--md-primary-fg-color);
   --md-default-fg-color--dark:     var(--md-primary-fg-color);
   
-  --md-typeset-color:      #2D2D2D;
+  --md-typeset-color:      #333333;
   --md-typeset-a-color:    var(--md-typeset-color);
   --md-typeset-mark-color: var(--md-typeset-color); 
 
@@ -27,7 +27,7 @@
   --md-text-link-color:         var(--md-typeset-color);
 
   /* Accent color shades */
-  --md-accent-fg-color:             #7086DF;
+  --md-accent-fg-color:             #a5a5a5;
   --md-accent-fg-color--transparent: var(--md-typeset-color);
   --md-accent-bg-color:              var(--md-typeset-color);
   --md-accent-bg-color--light:       var(--md-typeset-color);   
