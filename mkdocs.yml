@@ -26,7 +26,6 @@ theme:
     - content.code.annotation
     - content.code.copy  
     - content.action.edit   
-  custom_dir: docs/overrides    
 
 
 # Github Repo
