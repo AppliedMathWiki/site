@@ -90,8 +90,8 @@ The Least Absolute Shrinkage and Selection Operator (Lasso) function is commonly
 
 <!--- References --->
 
-[^1]: Tibshirani, Robert. "Regression shrinkage and selection via the lasso." _Journal of the Royal Statistical Society Series B: Statistical Methodology_. 1996
+[^1]: Tibshirani. "Regression shrinkage and selection via the lasso." _Journal of the Royal Statistical Society Series B: Statistical Methodology_. 1996
 
-[^2]: Fan, Jianqing, and Runze Li. "Variable selection via nonconcave penalized likelihood and its oracle properties." _Journal of the American statistical Association_. 2001.
+[^2]: Fan, Li. "Variable selection via nonconcave penalized likelihood and its oracle properties." _Journal of the American statistical Association_. 2001.
 
 
