@@ -2,12 +2,12 @@
 hide:
   - navigation
   - toc
+title: OptWiki
+template: home.html
 ---
 
 
 # OptWiki
-
-:material-draw-pen: [Howard Heaton](https://howardheaton.tech)  
 
 <center>
     Your wiki for optimization.
@@ -20,7 +20,6 @@ Several popular models include
 - Lasso
 - Lease Squares
 
-
 ## Popular Algorithms
 
 Algorithms include
@@ -30,5 +29,5 @@ Algorithms include
 - Projected Gradient
 
 <center>
-[Contact Us](https://google.com){ .md-button .md-button--primary }
+[Contact Us](https://form.jotform.com/heatonforms/contact){ .md-button .md-button--primary }
 </center>
