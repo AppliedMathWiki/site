@@ -2,8 +2,8 @@
 /* Light mode */
 [data-md-color-scheme="default"] {
 
-  --md-primary-bg-color: #F5F5F5;
-  --md-default-bg-color: #F5F5F5;
+  --md-primary-bg-color: #fdfdfd;
+  --md-default-bg-color: #fdfdfd;
   --md-primary-fg-color: #3498db;  
 
   --md-default-bg-color--light:    var(--md-primary-bg-color);
@@ -37,8 +37,8 @@
   --md-code-fg-color: var(--md-typeset-color);
 
   /* Header */
-  --md-header-fg-color:       #ffffff; 
-  --md-header-bg-color:       #ffffff; 
+  --md-header-fg-color:       #fdfdfd; 
+  --md-header-bg-color:       #fdfdfd; 
 
   /* Buttons */
   .md-button {border-radius:      20px;
