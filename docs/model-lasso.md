@@ -72,7 +72,7 @@ Convex. Biased[^2].
     }
     ```    
 
-## References
+<!--- References --->
 
 [^1]: Tibshirani, Robert. "Regression shrinkage and selection via the lasso." _Journal of the Royal Statistical Society Series B: Statistical Methodology_. 1996
 
