@@ -39,7 +39,7 @@ Anyone can submit edits / additions via Github.[^1]
 
 Content discussion is facilitated via [Github issues](https://github.com/OptWiki/site/issues).
 
-[^1]: Note the pencil "edit" button on each page.
+[^1]: Note the pencil button on each page to make an edit.
 
 <br>
 
