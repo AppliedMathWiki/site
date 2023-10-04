@@ -26,7 +26,9 @@ title: Home
 <br>
 
 [Random Algorithm](https://optwiki.site){ .md-button .md-button--primary } 
-&nbsp;
+
+<br>
+
 [Random Model](https://www.optwiki.site/model/lasso){ .md-button .md-button--primary } 
 
 <br>
