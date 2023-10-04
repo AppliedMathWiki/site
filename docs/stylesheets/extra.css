@@ -44,11 +44,11 @@
   .md-button {border-radius:      20px;
               border-color:       #a5a5a5;
               color:               var(--md-primary-fg-color);
-              background-color:   #ffffff;
+              background-color:   #fdfdfd;
              }
   .md-button:hover {
               border-radius:      20px;
-              color:              #ffffff;
+              color:              #fdfdfd;
               background-color:   var(--md-primary-fg-color);
              }
   
