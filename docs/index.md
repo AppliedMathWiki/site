@@ -8,8 +8,7 @@ title: OptWiki
 <script>
   var models = [
       'https://www.optwiki.site/model-lasso',
-      'http://www.stackoverflow.com',
-      'http://www.youtube.com'
+      'https://www.optwiki.site/model-lasso'
   ];
 
   function randomModel() {
@@ -21,10 +20,16 @@ title: OptWiki
 # OptWiki
 
 <center>
-    :material-pen: _The optimizer's Reference_
-</center>
+    :material-pen: _The Optimizer's Reference_
 
-<center>
+## Our Mission
+
+To create a canonical models and algorithms reference for practicioners
+
+## How it Works
+
+[To be completed]
+
 
 [Random Model](<a href="#" onclick="randomModel();"></a>){ .md-button .md-button--primary }
 [Random Algorithm]("randomModel();"){ .md-button .md-button--primary }
