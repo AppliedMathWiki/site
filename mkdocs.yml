@@ -21,7 +21,7 @@ theme:
     scheme: default  
   language: en
   font:
-    text: Ubuntu:wght@500  
+    text: Ubuntu
   features:
     - toc.integrate
     - search.suggest
