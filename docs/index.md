@@ -7,8 +7,8 @@ title: Home
 
 <script>
   var models = [
-      'https://www.optwiki.site/model-lasso',
-      'https://www.optwiki.site/model-lasso'
+      'https://www.optwiki.site/model/lasso',
+      'https://www.optwiki.site/model/lasso'
   ];
 
   function randomModel() {
@@ -26,7 +26,8 @@ title: Home
 <br>
 
 [Random Algorithm](https://optwiki.site){ .md-button .md-button--primary } 
-[Random Model](https://optwiki.ste){ .md-button .md-button--primary } 
+&nbsp;
+[Random Model](https://www.optwiki.site/model/lasso){ .md-button .md-button--primary } 
 
 <br>
 
