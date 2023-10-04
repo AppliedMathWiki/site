@@ -3,7 +3,6 @@ hide:
   - navigation
   - toc
 title: OptWiki
-template: home.html
 ---
 
 
