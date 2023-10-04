@@ -32,6 +32,8 @@ To create a canonical reference for optimization models and algorithms
 [Random Algorithm](https://optwiki.site){ .md-button .md-button--primary } 
 [Random Model](https://optwiki.ste){ .md-button .md-button--primary } 
 
+<br>
+
 ## How it Works
 
 Anyone can submit edits / additions via Github.[^1] 
@@ -43,6 +45,8 @@ Content discussion is facilitated via [Github issues](https://github.com/OptWiki
 <br>
 
 [Contact Us](https://form.jotform.com/heatonforms/contact){ .md-button .md-button--primary }
+
+<br>
   
 <!-- <a href="#" onclick="randomModel();">Random Model</a> -->
 
