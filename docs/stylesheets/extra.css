@@ -1,24 +1,10 @@
-@keyframes heart {
-  0%, 40%, 80% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.2);
-  }
-  60% {
-    transform: scale(1.1);
-  }  
-}
-.heart {
-  animation: heart 1400ms infinite;
-}
 
 /* Light mode */
 [data-md-color-scheme="default"] {
 
   --md-primary-bg-color: #ffffff;
   --md-default-bg-color: #ffffff;
-  --md-primary-fg-color: #7086DF;  
+  --md-primary-fg-color: #3498db;  
 
   --md-default-bg-color--light:    var(--md-primary-bg-color);
   --md-default-bg-color--lighter:  var(--md-primary-bg-color);
@@ -56,7 +42,7 @@
 
   /* Buttons */
   .md-button {border-radius:      20px;
-              border-color:       #ffbc50;
+              border-color:       #f39c12;
               color:               var(--md-primary-fg-color);
               background-color:   #ffffff;
              }
