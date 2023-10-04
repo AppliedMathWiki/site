@@ -3,11 +3,11 @@ hide:
   - navigation
 ---
 
-# LASSO
+# Lasso
 
 ## Model
 
-For a matrix $\mathsf{A \in \mathbb{R}^{m\times n}}$ and vector $\mathsf{b \in \mathbb{R}^m}$, the problem is
+For a matrix $\mathsf{A \in \mathbb{R}^{m\times n}}$, a vector $\mathsf{b \in \mathbb{R}^m}$, and a scalar $\mathsf{\lambda > 0}$, the model is
 
 $$
     \mathsf{\underset{x \in \mathbb{R}^n }{min} \ |Ax - b|_2^2 + \lambda |x|_1. }
