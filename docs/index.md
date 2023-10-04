@@ -33,6 +33,8 @@ title: Home
 
 ## How it Works
 
+Search for algorithms / models in search bar above.
+
 Anyone can submit edits / additions via Github.[^1] 
 
 Content discussion is facilitated via [Github issues](https://github.com/OptWiki/site/issues).
