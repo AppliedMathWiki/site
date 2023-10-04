@@ -5,42 +5,33 @@ hide:
 title: OptWiki
 ---
 
+<script>
+  var models = [
+      'https://www.optwiki.site/model-lasso',
+      'http://www.stackoverflow.com',
+      'http://www.youtube.com'
+  ];
+
+  function randomModel() {
+      var i = parseInt(Math.random() * models.length);
+      location.href = models[i];
+  }
+</script>
 
 # OptWiki
 
 <center>
-    Your wiki for optimization.
+    :material-pen: the optimiz
 </center>
 
-## Popular Models
-
-Several popular models include
-
-- Lasso
-- Lease Squares
-
-## Popular Algorithms
-
-Algorithms include
-
-- Gradient Descent
-- Alternating Direction Method of Multipliers (ADMM)
-- Projected Gradient
-
 <center>
-  [Contact Us](https://form.jotform.com/heatonforms/contact){ .md-button .md-button--primary }
+
+[Random Model]("randomModel();"){ .md-button .md-button--primary }
+[Random Algorithm]("randomModel();"){ .md-button .md-button--primary }
+
+<br>
+
+[Contact Us](https://form.jotform.com/heatonforms/contact){ .md-button .md-button--primary }
   
-  <script>
-    var sites = [
-        'http://www.google.com',
-        'http://www.stackoverflow.com',
-        'http://www.youtube.com'
-    ];
-  
-    function randomSite() {
-        var i = parseInt(Math.random() * sites.length);
-        location.href = sites[i];
-    }
-  </script>
-  <a href="#" onclick="randomSite();">Random</a>
+<a href="#" onclick="randomModel();">Random Model</a>
 </center>
