@@ -23,10 +23,6 @@ title: Home
 
 :material-pen: _Collective Wisdom for Modeling and Optimizing_
 
-## Our Mission
-
-To create a canonical reference for optimization models and algorithms
-
 <br>
 
 [Random Algorithm](https://optwiki.site){ .md-button .md-button--primary } 
