@@ -34,7 +34,7 @@ To create a canonical reference for optimization models and algorithms
 
 Anyone can submit edits / additions via Github.[^1] 
 
-[Github issues](https://github.com/OptWiki/site/issues) are used to faciliate content discussion.
+Content discussion is facilitated via [Github issues](https://github.com/OptWiki/site/issues).
 
 [^1]: Note the pencil "edit" button on each page.
 
