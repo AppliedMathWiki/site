@@ -19,11 +19,12 @@ The Least Absolute Shrinkage and Selection Operator (Lasso) function is commonly
 
 <center>
   
-| Property              |       |  
-|:---------------------:|:-----:| 
-| Convex                | ✅    |     
-| Strongly Convex       | 🟡    | 
-| Biased Estimator[^2]  | ✅    |
+| Property                |       |  
+|:-----------------------:|:-----:| 
+| Convex                  | ✅    |     
+| Strongly Convex         | 🟡    | 
+| Unbiased Estimator[^2]  | ✅    |
+| Feasible Estimator      | 🟡    |
 
 </center>
 
