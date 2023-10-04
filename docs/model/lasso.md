@@ -86,7 +86,7 @@ The Least Absolute Shrinkage and Selection Operator (Lasso) function is commonly
 
 ## See Also
 
-[coming soon]
+- [Wikipedia - Lasso (statistics)](https://en.wikipedia.org/wiki/Lasso_(statistics))
 
 <!--- References --->
 
