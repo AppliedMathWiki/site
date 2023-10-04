@@ -42,7 +42,7 @@
 
   /* Buttons */
   .md-button {border-radius:      20px;
-              border-color:       #f39c12;
+              border-color:       #a5a5a5;
               color:               var(--md-primary-fg-color);
               background-color:   #ffffff;
              }
