@@ -31,8 +31,8 @@ theme:
 
 
 # Github Repo
-repo_name: optwiki
-repo_url: https://github.com/howardheaton/optwiki
+repo_name: OptWiki/site
+repo_url: https://github.com/OptWiki/site
 edit_uri: edit/main/docs/
 
 
