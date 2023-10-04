@@ -10,16 +10,16 @@ hide:
 This is a test
 
 $$
-    \mathsf{\min_{x \in \mathbb{R}} \|Ax - b\|_2^2 + \lambda \|x\|_1. }
+    \mathsf{\underset{x \in \mathbb{R}}{min} \ \|Ax - b\|_2^2 + \lambda \|x\|_1. }
 $$
 
 ## Overview
 
-Classic scheme proposed by Tibshirani.
+The Least Absolute Shrinkage and Selection Operator (Lasso) function is commonly used in statistics and machine learning for variable selection and regularization. Introduced by Tibshirani[1^], it is primarily used in linear regression models, but its principles can be extended to other models as well. The key idea of the Lasso function is to add a penalty term to least squares regression that is the sum of absolute values of the coefficients.
 
 ## Properties
 
-Convex. Biased.
+Convex. Biased[^2].
 
 ## Applications
 
@@ -71,4 +71,11 @@ Convex. Biased.
       return 0;
     }
     ```    
+
+## References
+
+[^1]: Tibshirani, Robert. "Regression shrinkage and selection via the lasso." _Journal of the Royal Statistical Society Series B: Statistical Methodology_. 1996
+
+[^2]: Fan, Jianqing, and Runze Li. "Variable selection via nonconcave penalized likelihood and its oracle properties." _Journal of the American statistical Association_. 2001.
+
 
