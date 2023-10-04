@@ -17,9 +17,15 @@ $$
 
 The Least Absolute Shrinkage and Selection Operator (Lasso) function is commonly used in statistics and machine learning for variable selection and regularization. Introduced by Tibshirani[^1], it is primarily used in linear regression models, but its principles can be extended to other models as well. The key idea of the Lasso function is to add a penalty term to least squares regression that is the sum of absolute values of the coefficients.
 
-## Properties
+<center>
+  
+| Property              |       |  
+|:---------------------:|:-----:| 
+| Convex                | ✅    |     
+| Strongly Convex       | 🟡    | 
+| Biased Estimator[^2]  | ✅    |
 
-Convex. Biased[^2].
+</center>
 
 ## Applications
 
