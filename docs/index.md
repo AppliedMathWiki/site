@@ -21,7 +21,7 @@ title: OptWiki
 # OptWiki
 
 <center>
-    :material-pen: The optimizer's reference tool
+    :material-pen: _The optimizer's Reference_
 </center>
 
 <center>
