@@ -20,6 +20,8 @@ theme:
   palette:
     scheme: default  
   language: en
+  font:
+    text: Ubuntu:wght@500  
   features:
     - toc.integrate
     - search.suggest
