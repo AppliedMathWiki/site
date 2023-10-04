@@ -21,12 +21,12 @@ title: OptWiki
 # OptWiki
 
 <center>
-    :material-pen: the optimiz
+    :material-pen: The optimizer's reference tool
 </center>
 
 <center>
 
-[Random Model]("randomModel();"){ .md-button .md-button--primary }
+[Random Model](<a href="#" onclick="randomModel();"></a>){ .md-button .md-button--primary }
 [Random Algorithm]("randomModel();"){ .md-button .md-button--primary }
 
 <br>
