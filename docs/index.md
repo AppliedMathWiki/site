@@ -2,7 +2,7 @@
 hide:
   - navigation
   - toc
-title: OptWiki
+title: Home
 ---
 
 <script>
@@ -17,22 +17,25 @@ title: OptWiki
   }
 </script>
 
-# OptWiki
-
 <center>
-    :material-pen: _The Optimizer's Reference_
+  
+#  Optwiki
+
+:material-pen: _The Optimizer's Reference_
 
 ## Our Mission
 
-To create a canonical models and algorithms reference for practicioners
+To create a canonical reference for optimization models and algorithms
+
+[Random Algorithm](<script> randomModel() </script>){ .md-button .md-button--primary }
+[Random Model](<a href="#" onclick="randomModel();"></a>){ .md-button .md-button--primary }
 
 ## How it Works
 
-[To be completed]
+- Anyone can submit edits / additions via Github.[^1]
+- [Github issues](https://github.com/OptWiki/site/issues) are used to faciliate content discussion.
 
-
-[Random Model](<a href="#" onclick="randomModel();"></a>){ .md-button .md-button--primary }
-[Random Algorithm]("randomModel();"){ .md-button .md-button--primary }
+[^1]: Note the pencil "edit" button on each page.
 
 <br>
 
