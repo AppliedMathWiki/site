@@ -7,10 +7,10 @@ hide:
 
 ## Model
 
-This is a test
+For a matrix $\mathsf{A \in \mathbb{R}^{m\times n}}$ and vector $\mathsf{b \in \mathbb{R}^m}$, the problem is
 
 $$
-    \mathsf{\underset{x \in \mathbb{R}}{min} \ \|Ax - b\|_2^2 + \lambda \|x\|_1. }
+    \mathsf{\underset{x \in \mathbb{R}^n }{min} \ |Ax - b|_2^2 + \lambda |x|_1. }
 $$
 
 ## Overview
@@ -71,6 +71,10 @@ Convex. Biased[^2].
       return 0;
     }
     ```    
+
+## See Also
+
+[coming soon]
 
 <!--- References --->
 
