@@ -19,21 +19,22 @@ title: Home
 
 <center>
   
-#  Optwiki
+#  OptWiki
 
-:material-pen: _The Optimizer's Reference_
+:material-pen: _Collective Wisdom for Modeling and Optimizing_
 
 ## Our Mission
 
 To create a canonical reference for optimization models and algorithms
 
-[Random Algorithm](<script> randomModel() </script>){ .md-button .md-button--primary }
-[Random Model](<a href="#" onclick="randomModel();"></a>){ .md-button .md-button--primary }
+[Random Algorithm](https://optwiki.site){ .md-button .md-button--primary } 
+[Random Model](https://optwiki.ste){ .md-button .md-button--primary } 
 
 ## How it Works
 
-- Anyone can submit edits / additions via Github.[^1]
-- [Github issues](https://github.com/OptWiki/site/issues) are used to faciliate content discussion.
+Anyone can submit edits / additions via Github.[^1] 
+
+[Github issues](https://github.com/OptWiki/site/issues) are used to faciliate content discussion.
 
 [^1]: Note the pencil "edit" button on each page.
 
