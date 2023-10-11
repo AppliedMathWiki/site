@@ -7,11 +7,11 @@ hide:
 
 ## Iteration
 
-For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5], and a function[^4] $\mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}$, the update $\mathsf{x^{k+1}}$ in gradient descent is defined by[^6]
-
-[^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
+For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] \ $\mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}$, the Franke-Wolfe update $\mathsf{x^{k+1}}$ is defined by[^6]
 
 [^5]: We let $\mathbb{H}$ be a real-valued finite dimensional Hilbert space (_e.g_ $\mathbb{H} = \mathbb{R}^{\mathsf{n}}$).
+
+[^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
 
 [^6]: The objective in the update is equivalent to minimizing the linearization of $\mathsf{f}$ about $\mathsf{x^k}$, i.e. $\mathsf{f(x^k)+\left<\nabla f(x^k),\ x - x^k\right>}.$
 
@@ -25,11 +25,21 @@ Maintains feasibility. Is equivalent to minimizing linearizations.
 
 ## Properties
 
-**Convergence Theorem**[^1] If $\mathsf{f}$ is convex and differentiable over $\mathcal{C}$ and the set $\mathcal{C}$ is convex and compact, then the sequence $\mathsf{\{x^k\}}$ converges to a minimizer of $\mathsf{f}$ over $\mathcal{C}$.
+**Convergence Theorem**[^1] 
 
-Zigzag Behavior[^2] Oscillations can occur...
+If $\mathsf{f}$ is convex and differentiable over $\mathcal{C}$ and the set $\mathcal{C}$ is convex and compact, then the sequence $\mathsf{\{x^k\}}$ converges to a minimizer of $\mathsf{f}$ over $\mathcal{C}$.
 
-Invariant to Coordinate System[^3] Can rescale or re-jigger coordinates without any change in outcomes.
+**Zigzag Behavior**[^2] 
+
+Oscillations can occur...
+
+**Invariant to Coordinate System**[^3]
+
+Can rescale or re-jigger coordinates without any change in outcomes.
+
+**Projection-Free**
+
+No projections needed if $\mathcal{x^1 \in \mathcal{C}.}$
 
 
 [^1]: Insert citation to classic work.
