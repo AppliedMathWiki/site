@@ -20,17 +20,19 @@ theme:
   palette:
     scheme: default  
   language: en
+  font:
+    text: Ubuntu
   features:
     - toc.integrate
     - search.suggest
     - content.code.annotation
     - content.code.copy  
-    - content.action.edit    
+    - content.action.edit   
 
 
 # Github Repo
-repo_name: optwiki
-repo_url: https://github.com/howardheaton/optwiki
+repo_name: OptWiki/site
+repo_url: https://github.com/OptWiki/site
 edit_uri: edit/main/docs/
 
 
@@ -72,4 +74,6 @@ extra_javascript:
 copyright: |
   &copy; 2023 Howard Heaton
   <br>
-  <a href="#__consent">Cookie Settings</a>
+  <a href="#__consent">Cookie Settings</a> &nbsp; &nbsp;
+  <a href="https://optwiki.site/tos">Terms of Service </a> &nbsp; &nbsp;
+  <a href="https://optwiki.site/privacy">Privacy Policy</a>

@@ -1,24 +1,10 @@
-@keyframes heart {
-  0%, 40%, 80% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.2);
-  }
-  60% {
-    transform: scale(1.1);
-  }  
-}
-.heart {
-  animation: heart 1400ms infinite;
-}
 
 /* Light mode */
 [data-md-color-scheme="default"] {
 
-  --md-primary-bg-color: #ffffff;
-  --md-default-bg-color: #ffffff;
-  --md-primary-fg-color: #7086DF;  
+  --md-primary-bg-color: #fdfdfd;
+  --md-default-bg-color: #fdfdfd;
+  --md-primary-fg-color: #3498db;  
 
   --md-default-bg-color--light:    var(--md-primary-bg-color);
   --md-default-bg-color--lighter:  var(--md-primary-bg-color);
@@ -29,7 +15,7 @@
   --md-default-fg-color--lightest: var(--md-primary-fg-color);
   --md-default-fg-color--dark:     var(--md-primary-fg-color);
   
-  --md-typeset-color:      #2D2D2D;
+  --md-typeset-color:      #333333;
   --md-typeset-a-color:    var(--md-typeset-color);
   --md-typeset-mark-color: var(--md-typeset-color); 
 
@@ -41,7 +27,7 @@
   --md-text-link-color:         var(--md-typeset-color);
 
   /* Accent color shades */
-  --md-accent-fg-color:             #7086DF;
+  --md-accent-fg-color:             #a5a5a5;
   --md-accent-fg-color--transparent: var(--md-typeset-color);
   --md-accent-bg-color:              var(--md-typeset-color);
   --md-accent-bg-color--light:       var(--md-typeset-color);   
@@ -51,18 +37,18 @@
   --md-code-fg-color: var(--md-typeset-color);
 
   /* Header */
-  --md-header-fg-color:       #ffffff; 
-  --md-header-bg-color:       #ffffff; 
+  --md-header-fg-color:       #fdfdfd; 
+  --md-header-bg-color:       #fdfdfd; 
 
   /* Buttons */
   .md-button {border-radius:      20px;
-              border-color:       #ffbc50;
+              border-color:       #a5a5a5;
               color:               var(--md-primary-fg-color);
-              background-color:   #ffffff;
+              background-color:   #fdfdfd;
              }
   .md-button:hover {
               border-radius:      20px;
-              color:              #ffffff;
+              color:              #fdfdfd;
               background-color:   var(--md-primary-fg-color);
              }
   
