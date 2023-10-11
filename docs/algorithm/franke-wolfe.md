@@ -9,10 +9,12 @@ hide:
 
 ## Iteration
 
-For a constraint set $\mathcal{C} \subseteq \mathbb{H}$ ,and a function $\mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}, the update $\mathsf{x^{k+1}}$ in gradient descent is defined by
+For a finite dimensional Hilbert space $\mathbb{H}$ (_e.g_ $\mathbb{H} = \mathbb{R}^{\mathsf{n}}$) constraint set $\mathcal{C} \subseteq \mathbb{H}$, and a function[^4] $\mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}, the update $\mathsf{x^{k+1}}$ in gradient descent is defined by
+
+[^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
 
 $$
-    \mathsf{x^{k+1} \triangleq \argmin_{x\in \mathcal{C}} \left< \nabla f(x^k), x \right> }.
+    \mathsf{x^{k+1} \triangleq \underset{x\in \mathcal{C}}{argmin} \left< \nabla f(x^k), x \right> }.
 $$
 
 ## Overview
