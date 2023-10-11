@@ -5,16 +5,18 @@ hide:
 
 # Franke-Wolfe
 
-(Assume everything is a real-valued and finite dimensional Hilbert space.)
-
 ## Iteration
 
-For a finite dimensional Hilbert space $\mathbb{H}$ (_e.g_ $\mathbb{H} = \mathbb{R}^{\mathsf{n}}$) constraint set $\mathcal{C} \subseteq \mathbb{H}$, and a function[^4] $\mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}, the update $\mathsf{x^{k+1}}$ in gradient descent is defined by
+For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5], and a function[^4] $\mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}$, the update $\mathsf{x^{k+1}}$ in gradient descent is defined by[^6]
 
 [^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
 
+[^5]: We let $\mathbb{H}$ be a real-valued finite dimensional Hilbert space (_e.g_ $\mathbb{H} = \mathbb{R}^{\mathsf{n}}$).
+
+[^6]: The objective in the update is equivalent to minimizing the linearization of $\mathsf{f}$ about $\mathsf{x^k}$, i.e. $\mathsf{f(x^k)+\left<\nabla f(x^k),\ x - x^k\right>}.$
+
 $$
-    \mathsf{x^{k+1} \triangleq \underset{x\in \mathcal{C}}{argmin} \left< \nabla f(x^k), x \right> }.
+    \mathsf{x^{k+1} \triangleq \underset{x\in \mathcal{C}}{argmin} \left< \nabla f(x^k),\  x \right> }.
 $$
 
 ## Overview
