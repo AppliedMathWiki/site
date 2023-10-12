@@ -1,7 +1,6 @@
 ---
 hide:
   - navigation
-  - toc
 title: Home
 ---
 
@@ -24,6 +23,8 @@ title: Home
 :material-pen: _Collective Wisdom for Modeling and Optimizing_
 
 <br>
+
+See the [tags page](https://www.optwiki.site/tags) for lists of all tagged articles.
 
 [Random Algorithm](https://optwiki.site){ .md-button .md-button--primary } 
 
