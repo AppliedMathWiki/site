@@ -1,4 +1,4 @@
-name: wiki site 
+name: OptWiki Site 
 on:
   push:
     branches:
