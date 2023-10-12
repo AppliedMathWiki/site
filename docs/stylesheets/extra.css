@@ -11,9 +11,9 @@
   --md-default-bg-color--lightest: var(--md-primary-bg-color);
 
   --md-default-fg-color--light:    var(--md-primary-fg-color);
-  --md-default-fg-color--lighter:  var(--md-primary-fg-color);
-  --md-default-fg-color--lightest: var(--md-primary-fg-color);
-  --md-default-fg-color--dark:     var(--md-primary-fg-color);
+  --md-default-fg-color--lighter:  var(#bbc6f0);
+  --md-default-fg-color--lightest: var(#e0e5f8);
+  --md-default-fg-color--dark:     var(#5467b2);
   
   --md-typeset-color:      #333333;
   --md-typeset-a-color:    var(--md-typeset-color);
