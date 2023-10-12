@@ -9,6 +9,10 @@ plugins:
   - tags:
       tags_file: tags.md
   - mkdocstrings
+  - git-committers:
+      repository: OptWiki/site
+      branch: main  
+  - git-revision-date-localized      
   - social:
       cards_color:
         fill: "#3498db" 
