@@ -679,6 +679,18 @@ Maintains feasibility. Is equivalent to minimizing linearizations.</p>
 <li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Frank%E2%80%93Wolfe_algorithm">Frank-Wolfe algorithm</a></li>
 <li>variations of franke-wolfe.</li>
 </ul>
+<p>{% block footer %}</p>
+<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+  <li class="contributors-holder">
+    <span class="contributors-text">Contributors</span>
+    <ul class="contributors" data-bi-name="contributors">
+      {%- for user in committers -%}
+      <li><a href="{{ user.url }}" title="{{ user.name }}" data-bi-name="contributorprofile" target="_blank"><img src="{{ user.avatar }}" alt="{{ user.name }}"></a></li>
+      {%- endfor -%}
+    </ul>
+  </li>
+</ul>
+<p>{% endblock %}</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -842,6 +854,8 @@ Maintains feasibility. Is equivalent to minimizing linearizations.</p>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
       
     
   </body>
