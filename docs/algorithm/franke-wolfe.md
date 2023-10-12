@@ -64,16 +64,37 @@ No projections needed if $\mathcal{x^1 \in \mathcal{C}.}$
 
 ## Code
 
-=== "Python"
+=== "Python (Linear Constraint)"
 
-    ``` c++
+    ``` python
+    # Constraint: C = { x : A * x = b }
+    A = np.randn(100, 5)
+    b = np.randn(5, 1)
+
+    def get_fw_solution(gradf, A, b):
+        """ Compute Franke-Wolfe solution
+
+            args:
+              x: ...
+        """
+        x         = init
+        num_iters = 100
+
+        for _ in range(num_iters):
+            x = x - grad_f(x)
+        
+        return x
+    ```
+=== "Python (Ellipsoid Constraint)"
+
+    ``` python
     #include <iostream>
 
     int main(void) {
       std::cout << "Hello world!" << std::endl;
       return 0;
     }
-    ```    
+    ```         
 
 ## Applications
 
