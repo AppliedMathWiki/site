@@ -6,7 +6,8 @@ extra_css:
  
 plugins:
   - search
-  - tags  
+  - tags:
+      tags_file: tags.md
   - mkdocstrings
   - social:
       cards_color:
