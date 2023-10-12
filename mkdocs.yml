@@ -6,10 +6,11 @@ extra_css:
  
 plugins:
   - search
+  - tags  
   - mkdocstrings
   - social:
       cards_color:
-        fill: "#7086DF" 
+        fill: "#3498db" 
         text: "#FFFFFF"
   
 theme:
