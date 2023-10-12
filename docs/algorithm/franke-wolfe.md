@@ -55,7 +55,7 @@ Can rescale or re-jigger coordinates without any change in outcomes.
 No projections needed if $\mathcal{x^1 \in \mathcal{C}.}$
 
 
-[^1]: Jaggi. _Revisiting Frank-Wolfe: Projection-Free Sparse Convex Optimization._ ICML. 2013.
+[^1]: Jaggi, M. _Revisiting Frank-Wolfe: Projection-Free Sparse Convex Optimization._ ICML. 2013.
 
 [^2]: Insert citations to Jaggi paper.
 
