@@ -101,9 +101,11 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
 
 ## See Also
 
-- Wikipedia: [Frank-Wolfe algorithm](https://en.wikipedia.org/wiki/Frank%E2%80%93Wolfe_algorithm)
+- [Wikipedia: Frank-Wolfe algorithm](https://en.wikipedia.org/wiki/Frank%E2%80%93Wolfe_algorithm)
 - variations of franke-wolfe.
 
+
+<html>
 {% block footer %}
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <li class="contributors-holder">
@@ -116,3 +118,4 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
   </li>
 </ul>
 {% endblock %}
+</html>
