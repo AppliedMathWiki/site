@@ -1,6 +1,4 @@
 ---
-hide:
-  - navigation
 tags:
   - algorithm
   - franke-wolfe

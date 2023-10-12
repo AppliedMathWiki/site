@@ -1,6 +1,7 @@
 ---
-hide:
-  - navigation
+tags:
+  - model
+  - convex
 ---
 
 # Lasso
