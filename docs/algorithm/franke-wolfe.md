@@ -103,3 +103,16 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
 
 - Wikipedia: [Frank-Wolfe algorithm](https://en.wikipedia.org/wiki/Frank%E2%80%93Wolfe_algorithm)
 - variations of franke-wolfe.
+
+{% block footer %}
+<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+  <li class="contributors-holder">
+    <span class="contributors-text">Contributors</span>
+    <ul class="contributors" data-bi-name="contributors">
+      {%- for user in committers -%}
+      <li><a href="{{ user.url }}" title="{{ user.name }}" data-bi-name="contributorprofile" target="_blank"><img src="{{ user.avatar }}" alt="{{ user.name }}"></a></li>
+      {%- endfor -%}
+    </ul>
+  </li>
+</ul>
+{% endblock %}
