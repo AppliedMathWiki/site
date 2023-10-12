@@ -19,7 +19,7 @@ hide:
 
 <center>
   
-#  OptWiki
+# OptWiki
 
 :material-pen: _Collective Wisdom for Modeling and Optimizing_
 
@@ -27,7 +27,7 @@ hide:
 
 See the [tags page](https://www.optwiki.site/tags) for lists of all tagged articles.
 
-[Random Algorithm](https://optwiki.site){ .md-button .md-button--primary } 
+[Random Algorithm](https://optwiki.site/algorithm/franke-wolfe){ .md-button .md-button--primary } 
 
 [Random Model](https://www.optwiki.site/model/lasso){ .md-button .md-button--primary } 
 
