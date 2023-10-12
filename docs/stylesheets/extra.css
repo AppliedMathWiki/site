@@ -50,7 +50,7 @@
               border-radius:      20px;
               color:              #fdfdfd;
               background-color:   var(--md-primary-fg-color);
-             }
+             }             
   
   /* Footer */
   --md-footer-bg-color:        var(--md-primary-fg-color);

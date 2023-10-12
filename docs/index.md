@@ -1,5 +1,8 @@
 ---
 title: Home
+hide:
+  - toc
+  - navigation
 ---
 
 <script>
