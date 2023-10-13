@@ -43,7 +43,7 @@ To make new and established optimization tools and techniques widely accessible.
 
 Users: Search for algorithms / models in search bar above.
 
-Contributors: Anyone can submit edits / additions via Github.[^2] 
+Contributors: Submit edits / additions via Github.[^2] 
 
 [^1]: This is based on Benkler's essay _Coase's Penguin, Or, Linux and 'The Nature of the Firm'_ about collaboratively producing online.
 
