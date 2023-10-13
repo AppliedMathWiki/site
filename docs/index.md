@@ -41,8 +41,6 @@ To make new and established optimization tools and techniques widely accessible.
 
 ## How it Works
 
-We adopt a commons-based peer production[^1] approach whereby anybody with interest in optimization can contribute.
-
 Users: Search for algorithms / models in search bar above.
 
 Contributors: Anyone can submit edits / additions via Github.[^2] 
@@ -50,6 +48,8 @@ Contributors: Anyone can submit edits / additions via Github.[^2]
 [^1]: This is based on Benkler's essay _Coase's Penguin, Or, Linux and 'The Nature of the Firm'_ about collaboratively producing online.
 
 [^2]: Note the pencil button on each page to make an edit.
+
+We use a commons-based peer production[^1] approach where anyone with interest can contribute.
 
 <br>
 

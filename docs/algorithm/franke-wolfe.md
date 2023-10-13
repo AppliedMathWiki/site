@@ -3,13 +3,15 @@ tags:
   - algorithm
   - franke-wolfe
   - conditional-gradient
+  - first-order
+  - projection-free
 ---
 
 # Franke-Wolfe
 
 ## Definition
 
-For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] $\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}$, the Franke-Wolfe algorithm is an iterative scheme with update $\mathsf{x^{k+1}}$ is defined by 
+For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] $\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}$, the Franke-Wolfe algorithm is an iterative scheme with update $\mathsf{x^{k+1}}$ defined by 
 
 [^5]: We let $\mathbb{H}$ be a real-valued finite dimensional Hilbert space (_e.g_ $\ \mathbb{H} = \mathbb{R}^{\mathsf{n}}$).
 
@@ -21,12 +23,9 @@ $$
 
 ## Overview
 
-The Frank–Wolfe algorithm, also called "conditional gradient", is an iterative first-order algorithm for solving constrained convex problems. The method was proposed by Marguerite Frank and Philip Wolfe in 1956.[^6] Each update minimimizes the linearization of $\mathsf{f}$ about $\mathsf{x^k}$ (i.e. $\mathsf{f(x^k)+\left<\nabla f(x^k),\ x - x^k\right>})$ over the domain $\mathcal{C}$. 
+The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iterative first-order algorithm for solving constrained convex problems. The method was proposed by Marguerite Frank and Philip Wolfe in 1956.[^6] Each update minimimizes the linearization of $\mathsf{f}$ about $\mathsf{x^k}over the domain $\mathcal{C}$. This ensures each iteration is feasible. Several standard convergence properties hold for FW and its variants.
 
 [^6]: Frank, F., Wolfe, P. _An algorithm for quadratic programming_. Naval Research Logistics Quarterly. 1956.
-
-The objective in the update is equivalent to 
-Maintains feasibility. Is equivalent to minimizing linearizations.
 
 ## Properties
 
@@ -48,7 +47,7 @@ Oscillations can occur...
 
 Can rescale or re-jigger coordinates without any change in outcomes.
 
-**Projection-Free**
+**Feasible + Projection-Free**
 
 No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
 
@@ -69,14 +68,18 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
     A = np.randn(100, 5)
     b = np.randn(5, 1)
 
-    def get_fw_solution(gradf, A, b):
+    def get_fw_solution(gradf, A, b, num_iters=100):
         """ Compute Franke-Wolfe solution
 
             args:
-              x: ...
+                gradf: gradient operator for objective
+                A:     matrix defining linear constraint
+                b:     vector defining linear constraint
+
+            returns:
+              x: solution estimate
         """
-        x         = init
-        num_iters = 100
+        x = init # find a feasible point
 
         for _ in range(num_iters):
             x = x - grad_f(x)
@@ -86,12 +89,27 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
 === "Python (Ellipsoid Constraint)"
 
     ``` python
-    #include <iostream>
+    # Constraint: C = { x : A * x = b }
+    A = np.randn(100, 5)
+    b = np.randn(5, 1)
 
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
+    def get_fw_solution(gradf, A, b, num_iters=100):
+        """ Compute Franke-Wolfe solution
+
+            args:
+                gradf: gradient operator for objective
+                A:     matrix defining linear constraint
+                b:     vector defining linear constraint
+
+            returns:
+              x: solution estimate
+        """
+        x = init # find a feasible point
+
+        for _ in range(num_iters):
+            x = x - grad_f(x)
+        
+        return x
     ```         
 
 ## Applications
