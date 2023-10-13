@@ -25,11 +25,11 @@ hide:
 
 <br>
 
-See the [tags page](https://www.optwiki.site/tags) for lists of all tagged articles.
-
 [Random Algorithm](https://optwiki.site/algorithm/franke-wolfe){ .md-button .md-button--primary } 
 
 [Random Model](https://www.optwiki.site/model/lasso){ .md-button .md-button--primary } 
+
+See the [tags page](https://www.optwiki.site/tags) for lists of all tagged articles.
 
 <br>
 
@@ -50,7 +50,6 @@ Contributors: Anyone can submit edits / additions via Github.[^2]
 [^1]: This is based on Benkler's essay _Coase's Penguin, Or, Linux and 'The Nature of the Firm'_ about collaboratively producing online.
 
 [^2]: Note the pencil button on each page to make an edit.
-
 
 <br>
 

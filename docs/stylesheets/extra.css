@@ -24,7 +24,7 @@
 
   /* Primary color shades */
   --md-primary-bg-color--light: var(--md-typeset-color);
-  --md-text-link-color:         var(--md-typeset-color);
+  --md-text-link-color:         #3498db;
 
   /* Accent color shades */
   --md-accent-fg-color:             #a5a5a5;
