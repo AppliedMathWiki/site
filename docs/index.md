@@ -19,7 +19,7 @@ hide:
 
 <center>
   
-# OptWiki
+<h1>OptWiki</h1>
 
 :material-pen: _Collective Wisdom for Modeling and Optimizing_
 
@@ -33,15 +33,24 @@ See the [tags page](https://www.optwiki.site/tags) for lists of all tagged artic
 
 <br>
 
+## OptWiki Mission
+
+To make new and established optimization tools and techniques widely accessible.
+
+<br>
+
 ## How it Works
 
-Search for algorithms / models in search bar above.
+We adopt a commons-based peer production[^1] approach whereby anybody with interest in optimization can contribute.
 
-Anyone can submit edits / additions via Github.[^1] 
+Users: Search for algorithms / models in search bar above.
 
-Content discussion is facilitated via [Github issues](https://github.com/OptWiki/site/issues).
+Contributors: Anyone can submit edits / additions via Github.[^2] 
 
-[^1]: Note the pencil button on each page to make an edit.
+[^1]: This is based on Benkler's essay _Coase's Penguin, Or, Linux and 'The Nature of the Firm'_ about collaboratively producing online.
+
+[^2]: Note the pencil button on each page to make an edit.
+
 
 <br>
 
