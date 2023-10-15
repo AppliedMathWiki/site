@@ -9,6 +9,14 @@ tags:
 
 # Franke-Wolfe
 
+!!! warning "Note from Editors"
+    This article has been flagged by the editors for the following:
+    - Missing illustration for describing algorithm
+    - Incomplete list of properties
+    - Incomplete code in programing examples
+    - Inadequate references to applications (Section: Applications)    
+    - Inadequate references to related works (Section: See Also)
+
 ## Definition
 
 For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] $\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}$, the Franke-Wolfe algorithm is an iterative scheme with update $\mathsf{x^{k+1}}$ defined by 
