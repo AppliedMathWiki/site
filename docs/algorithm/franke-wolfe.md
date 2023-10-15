@@ -11,11 +11,11 @@ tags:
 
 !!! warning "Note from Editors"
     This article has been flagged by the editors for the following:
-    - Missing illustration for describing algorithm
-    - Incomplete list of properties
-    - Incomplete code in programing examples
-    - Inadequate references to applications (Section: Applications)    
-    - Inadequate references to related works (Section: See Also)
+    - [ ] Missing illustration for describing algorithm
+    - [ ] Incomplete list of properties
+    - [ ] Incomplete code in programing examples
+    - [ ] Inadequate references to applications (Section: Applications)    
+    - [ ] Inadequate references to related works (Section: See Also)
 
 ## Definition
 
