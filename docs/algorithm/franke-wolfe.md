@@ -11,31 +11,36 @@ tags:
 
 !!! warning "Note from Editors"
 
-    This article has been flagged by the editors for the following:
+    This article has been flagged as incomplete for the following:
 
-    * Missing illustration for describing algorithm
-    * Incomplete list of properties
-    * Incomplete code in programing examples
-    * Inadequate references to applications (Section: Applications)    
-    * Inadequate references to related works (Section: See Also)
+    - [ ] Incomplete / poorly formatted list of properties
+    - [ ] Incomplete code in programing examples
+    - [ ] Inadequate references to applications (Section: Applications)    
+    - [ ] Inadequate references to related works (Section: See Also)
 
 ## Definition
 
-For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] $\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable at $\mathsf{x^k \in \mathbb{H}}$, the Franke-Wolfe algorithm is an iterative scheme with update $\mathsf{x^{k+1}}$ defined by 
+For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] $\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable over $\mathcal{C}$, consider the problem
+
+$$
+    \mathsf{\underset{x \in \mathcal{C}} f(x).}
+$$
+
+The Franke-Wolfe algorithm is an iterative scheme for solving this problem with update $\mathsf{x^{k+1}}$ defined by 
 
 [^5]: We let $\mathbb{H}$ be a real-valued finite dimensional Hilbert space (_e.g_ $\ \mathbb{H} = \mathbb{R}^{\mathsf{n}}$).
 
 [^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
 
 \begin{aligned}
-    \mathsf{s^{k+1}} & \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \left< \nabla f(x^k),\  x \right> } \\
-    \mathsf{x^{k+1}} & \mathsf{\triangleq x^k + \alpha_k \left( s^k - x^k \right)},
+    \mathsf{s^{k+1}} & \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \left< \nabla f(x^k),\  x \right>, } \\
+    \mathsf{x^{k+1}} & \mathsf{\triangleq x^k + \alpha_k \left( s^k - x^k \right),}
 \end{aligned}
 
 where
 
 $$
-\mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right)}
+\mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right).}
 $$
 
 ## Overview
