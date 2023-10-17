@@ -11,11 +11,11 @@ tags:
 
 !!! warning "Note from Editors"
     This article has been flagged by the editors for the following:
-    - [ ] Missing illustration for describing algorithm
-    - [ ] Incomplete list of properties
-    - [ ] Incomplete code in programing examples
-    - [ ] Inadequate references to applications (Section: Applications)    
-    - [ ] Inadequate references to related works (Section: See Also)
+    * Missing illustration for describing algorithm
+    * Incomplete list of properties
+    * Incomplete code in programing examples
+    * Inadequate references to applications (Section: Applications)    
+    * Inadequate references to related works (Section: See Also)
 
 ## Definition
 
@@ -26,7 +26,16 @@ For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] 
 [^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
 
 $$
-    \mathsf{x^{k+1} \triangleq \underset{x\in \mathcal{C}}{argmin} \left< \nabla f(x^k),\  x \right> }.
+    \begin{align*}
+    \mathsf{s^{k+1} & \triangleq \underset{x\in \mathcal{C}}{argmin} \left< \nabla f(x^k),\  x \right> } \\
+    \mathsf{x^{k+1} & \triangleq x^k + \alpha_k \left( s^k - x^k \right)},
+    \end{align*}
+$$
+
+where
+
+$$
+\mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right)}
 $$
 
 ## Overview
