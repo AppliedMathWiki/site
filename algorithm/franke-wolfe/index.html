@@ -628,16 +628,23 @@
 <div class="admonition warning">
 <p class="admonition-title">Note from Editors</p>
 <p>This article has been flagged by the editors for the following:
-- [ ] Missing illustration for describing algorithm
-- [ ] Incomplete list of properties
-- [ ] Incomplete code in programing examples
-- [ ] Inadequate references to applications (Section: Applications)  <br />
-- [ ] Inadequate references to related works (Section: See Also)</p>
+* Missing illustration for describing algorithm
+* Incomplete list of properties
+* Incomplete code in programing examples
+* Inadequate references to applications (Section: Applications)  <br />
+* Inadequate references to related works (Section: See Also)</p>
 </div>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
 <p>For a constraint set <span class="arithmatex">\(\mathcal{C} \subseteq \mathbb{H}\)</span><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">1</a></sup>  and a function<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">2</a></sup> <span class="arithmatex">\(\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}\)</span> that is differentiable at <span class="arithmatex">\(\mathsf{x^k \in \mathbb{H}}\)</span>, the Franke-Wolfe algorithm is an iterative scheme with update <span class="arithmatex">\(\mathsf{x^{k+1}}\)</span> defined by </p>
 <div class="arithmatex">\[
-    \mathsf{x^{k+1} \triangleq \underset{x\in \mathcal{C}}{argmin} \left&lt; \nabla f(x^k),\  x \right&gt; }.
+    \begin{align*}
+    \mathsf{s^{k+1} &amp; \triangleq \underset{x\in \mathcal{C}}{argmin} \left&lt; \nabla f(x^k),\  x \right&gt; } \\
+    \mathsf{x^{k+1} &amp; \triangleq x^k + \alpha_k \left( s^k - x^k \right)},
+    \end{align*}
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+\mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right)}
 \]</div>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iterative first-order algorithm for solving constrained convex problems. The method was proposed by Marguerite Frank and Philip Wolfe in 1956.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">3</a></sup> Each update minimimizes the linearization of <span class="arithmatex">\(\mathsf{f}\)</span> about <span class="arithmatex">\(\mathsf{x^k}\)</span> over the domain <span class="arithmatex">\(\mathcal{C}\)</span>. This ensures each iteration is feasible. Several standard convergence properties hold for FW and its variants.</p>
@@ -746,7 +753,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2023</span>
       
     
   </small>
