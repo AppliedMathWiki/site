@@ -23,7 +23,7 @@ tags:
 For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] $\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable over $\mathcal{C}$, consider the problem
 
 $$
-    \mathsf{\underset{x \in \mathcal{C}} f(x).}
+    \mathsf{\underset{x \in \mathcal{C}}{min} f(x).}
 $$
 
 The Franke-Wolfe algorithm is an iterative scheme for solving this problem with update $\mathsf{x^{k+1}}$ defined by 
