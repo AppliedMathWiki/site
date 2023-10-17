@@ -627,20 +627,22 @@
 <h1 id="franke-wolfe">Franke-Wolfe<a class="headerlink" href="#franke-wolfe" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Note from Editors</p>
-<p>This article has been flagged by the editors for the following:
-* Missing illustration for describing algorithm
-* Incomplete list of properties
-* Incomplete code in programing examples
-* Inadequate references to applications (Section: Applications)  <br />
-* Inadequate references to related works (Section: See Also)</p>
+<p>This article has been flagged by the editors for the following:</p>
+<ul>
+<li>Missing illustration for describing algorithm</li>
+<li>Incomplete list of properties</li>
+<li>Incomplete code in programing examples</li>
+<li>Inadequate references to applications (Section: Applications)    </li>
+<li>Inadequate references to related works (Section: See Also)</li>
+</ul>
 </div>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
 <p>For a constraint set <span class="arithmatex">\(\mathcal{C} \subseteq \mathbb{H}\)</span><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">1</a></sup>  and a function<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">2</a></sup> <span class="arithmatex">\(\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}\)</span> that is differentiable at <span class="arithmatex">\(\mathsf{x^k \in \mathbb{H}}\)</span>, the Franke-Wolfe algorithm is an iterative scheme with update <span class="arithmatex">\(\mathsf{x^{k+1}}\)</span> defined by </p>
 <div class="arithmatex">\[
-    \begin{align*}
+    \begin{aligned}
     \mathsf{s^{k+1} &amp; \triangleq \underset{x\in \mathcal{C}}{argmin} \left&lt; \nabla f(x^k),\  x \right&gt; } \\
     \mathsf{x^{k+1} &amp; \triangleq x^k + \alpha_k \left( s^k - x^k \right)},
-    \end{align*}
+    \end{aligned}
 \]</div>
 <p>where</p>
 <div class="arithmatex">\[
