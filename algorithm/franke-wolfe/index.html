@@ -638,12 +638,10 @@
 </div>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
 <p>For a constraint set <span class="arithmatex">\(\mathcal{C} \subseteq \mathbb{H}\)</span><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">1</a></sup>  and a function<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">2</a></sup> <span class="arithmatex">\(\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}\)</span> that is differentiable at <span class="arithmatex">\(\mathsf{x^k \in \mathbb{H}}\)</span>, the Franke-Wolfe algorithm is an iterative scheme with update <span class="arithmatex">\(\mathsf{x^{k+1}}\)</span> defined by </p>
-<div class="arithmatex">\[
-    \begin{aligned}
-    \mathsf{s^{k+1} &amp; \triangleq \underset{x\in \mathcal{C}}{argmin} \left&lt; \nabla f(x^k),\  x \right&gt; } \\
-    \mathsf{x^{k+1} &amp; \triangleq x^k + \alpha_k \left( s^k - x^k \right)},
-    \end{aligned}
-\]</div>
+<div class="arithmatex">\[\begin{aligned}
+    \mathsf{s^{k+1}} &amp; \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \left&lt; \nabla f(x^k),\  x \right&gt; } \\
+    \mathsf{x^{k+1}} &amp; \mathsf{\triangleq x^k + \alpha_k \left( s^k - x^k \right)},
+\end{aligned}\]</div>
 <p>where</p>
 <div class="arithmatex">\[
 \mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right)}
