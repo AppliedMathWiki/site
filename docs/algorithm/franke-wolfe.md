@@ -10,7 +10,9 @@ tags:
 # Franke-Wolfe
 
 !!! warning "Note from Editors"
+
     This article has been flagged by the editors for the following:
+
     * Missing illustration for describing algorithm
     * Incomplete list of properties
     * Incomplete code in programing examples
@@ -26,10 +28,10 @@ For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] 
 [^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
 
 $$
-    \begin{align*}
+    \begin{aligned}
     \mathsf{s^{k+1} & \triangleq \underset{x\in \mathcal{C}}{argmin} \left< \nabla f(x^k),\  x \right> } \\
     \mathsf{x^{k+1} & \triangleq x^k + \alpha_k \left( s^k - x^k \right)},
-    \end{align*}
+    \end{aligned}
 $$
 
 where
