@@ -20,13 +20,13 @@ tags:
 
 ## Definition
 
-For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] $\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable over $\mathcal{C}$, consider the problem
+For a constraint set $\mathcal{C} \subseteq \mathbb{H}$[^5]  and a function[^4] $\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}$ that is differentiable over $\mathcal{C}$, consider the constrained minimization problem
 
 $$
     \mathsf{\underset{x \in \mathcal{C}}{min} \ f(x).}
 $$
 
-The Franke-Wolfe algorithm is an iterative scheme for solving this problem with update $\mathsf{x^{k+1}}$ defined by 
+Franke-Wolfe is an iterative scheme for solving this problem with update $\mathsf{x^{k+1}}$ defined by 
 
 [^5]: We let $\mathbb{H}$ be a real-valued finite dimensional Hilbert space (_e.g_ $\ \mathbb{H} = \mathbb{R}^{\mathsf{n}}$).
 
@@ -37,7 +37,7 @@ The Franke-Wolfe algorithm is an iterative scheme for solving this problem with 
     \mathsf{x^{k+1}} & \mathsf{\triangleq x^k + \alpha_k \left( s^k - x^k \right),}
 \end{aligned}
 
-where
+with a step size rule typically given by either
 
 $$
 \mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right).}
@@ -136,10 +136,10 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
 
 ## Applications
 
-- Statistics... 
-- Compressed sensing...
+- Statistics.
+- Compressed sensing.
 
 ## See Also
 
 - [Wikipedia: Frank-Wolfe algorithm](https://en.wikipedia.org/wiki/Frank%E2%80%93Wolfe_algorithm)
-- variations of franke-wolfe.
+- Sparse Franke-Wolfe.
