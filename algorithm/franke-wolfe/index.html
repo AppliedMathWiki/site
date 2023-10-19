@@ -636,16 +636,16 @@
 </ul>
 </div>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
-<p>For a constraint set <span class="arithmatex">\(\mathcal{C} \subseteq \mathbb{H}\)</span><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">1</a></sup>  and a function<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">2</a></sup> <span class="arithmatex">\(\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}\)</span> that is differentiable over <span class="arithmatex">\(\mathcal{C}\)</span>, consider the problem</p>
+<p>For a constraint set <span class="arithmatex">\(\mathcal{C} \subseteq \mathbb{H}\)</span><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">1</a></sup>  and a function<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">2</a></sup> <span class="arithmatex">\(\ \mathsf{f\colon \mathbb{H} \rightarrow \overline{\mathbb{R}}}\)</span> that is differentiable over <span class="arithmatex">\(\mathcal{C}\)</span>, consider the constrained minimization problem</p>
 <div class="arithmatex">\[
     \mathsf{\underset{x \in \mathcal{C}}{min} \ f(x).}
 \]</div>
-<p>The Franke-Wolfe algorithm is an iterative scheme for solving this problem with update <span class="arithmatex">\(\mathsf{x^{k+1}}\)</span> defined by </p>
+<p>Franke-Wolfe is an iterative scheme for solving this problem with update <span class="arithmatex">\(\mathsf{x^{k+1}}\)</span> defined by </p>
 <div class="arithmatex">\[\begin{aligned}
     \mathsf{s^{k+1}} &amp; \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \ \left&lt; \nabla f(x^k),\  x \right&gt;, } \\
     \mathsf{x^{k+1}} &amp; \mathsf{\triangleq x^k + \alpha_k \left( s^k - x^k \right),}
 \end{aligned}\]</div>
-<p>where</p>
+<p>with a step size rule typically given by either</p>
 <div class="arithmatex">\[
 \mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right).}
 \]</div>
@@ -719,13 +719,13 @@
 </div>
 <h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Statistics... </li>
-<li>Compressed sensing...</li>
+<li>Statistics.</li>
+<li>Compressed sensing.</li>
 </ul>
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Frank%E2%80%93Wolfe_algorithm">Wikipedia: Frank-Wolfe algorithm</a></li>
-<li>variations of franke-wolfe.</li>
+<li>Sparse Franke-Wolfe.</li>
 </ul>
 <div class="footnote">
 <hr />
@@ -756,7 +756,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2023</span>
       
     
   </small>
