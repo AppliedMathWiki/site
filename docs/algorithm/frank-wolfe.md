@@ -1,13 +1,13 @@
 ---
 tags:
   - algorithm
-  - franke-wolfe
+  - frank-wolfe
   - conditional-gradient
   - first-order
   - projection-free
 ---
 
-# Franke-Wolfe
+# Frank-Wolfe
 
 !!! warning "Note from Editors"
 
@@ -26,7 +26,7 @@ $$
     \mathsf{\underset{x \in \mathcal{C}}{min} \ f(x).}
 $$
 
-Franke-Wolfe is an iterative scheme for solving this problem with update $\mathsf{x^{k+1}}$ defined by 
+Frank-Wolfe is an iterative scheme for solving this problem with update $\mathsf{x^{k+1}}$ defined by 
 
 [^5]: We let $\mathbb{H}$ be a real-valued finite dimensional Hilbert space (_e.g_ $\ \mathbb{H} = \mathbb{R}^{\mathsf{n}}$).
 
@@ -47,7 +47,7 @@ $$
 
 The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iterative first-order algorithm for solving constrained convex problems. The method was proposed by Marguerite Frank and Philip Wolfe in 1956.[^6] Each update minimimizes the linearization of $\mathsf{f}$ about $\mathsf{x^k}$ over the domain $\mathcal{C}$. This ensures each iteration is feasible. Several standard convergence properties hold for FW and its variants.
 
-[^6]: Frank, F., Wolfe, P. _An algorithm for quadratic programming_. Naval Research Logistics Quarterly. 1956.
+[^6]: Frank, M., Wolfe, P. _An algorithm for quadratic programming_. Naval Research Logistics Quarterly. 1956.
 
 ## Properties
 
@@ -91,7 +91,7 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
     b = np.randn(5, 1)
 
     def get_fw_solution(gradf, A, b, num_iters=100):
-        """ Compute Franke-Wolfe solution
+        """ Compute Frank-Wolfe solution
 
             args:
                 gradf: gradient operator for objective
@@ -116,7 +116,7 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
     b = np.randn(5, 1)
 
     def get_fw_solution(gradf, A, b, num_iters=100):
-        """ Compute Franke-Wolfe solution
+        """ Compute Frank-Wolfe solution
 
             args:
                 gradf: gradient operator for objective
