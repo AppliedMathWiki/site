@@ -25,7 +25,7 @@ hide:
 
 <br>
 
-[Random Algorithm](https://optwiki.site/algorithm/franke-wolfe){ .md-button .md-button--primary } 
+[Random Algorithm](https://optwiki.site/algorithm/frank-wolfe){ .md-button .md-button--primary } 
 
 [Random Model](https://www.optwiki.site/model/lasso){ .md-button .md-button--primary } 
 
