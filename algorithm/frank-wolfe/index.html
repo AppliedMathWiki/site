@@ -18,15 +18,15 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
-        <title>Franke-Wolfe - OptWiki</title>
+        <title>Frank-Wolfe - OptWiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -61,11 +61,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Franke-Wolfe - OptWiki" >
+        <meta  property="og:title"  content="Frank-Wolfe - OptWiki" >
       
         <meta  property="og:description"  content="Optimization Wiki" >
       
-        <meta  property="og:image"  content="./assets/images/social/algorithm/franke-wolfe.png" >
+        <meta  property="og:image"  content="./assets/images/social/algorithm/frank-wolfe.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -77,11 +77,11 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Franke-Wolfe - OptWiki" >
+        <meta  name="twitter:title"  content="Frank-Wolfe - OptWiki" >
       
         <meta  name="twitter:description"  content="Optimization Wiki" >
       
-        <meta  name="twitter:image"  content="./assets/images/social/algorithm/franke-wolfe.png" >
+        <meta  name="twitter:image"  content="./assets/images/social/algorithm/frank-wolfe.png" >
       
     
     
@@ -103,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#franke-wolfe" class="md-skip">
+        <a href="#frank-wolfe" class="md-skip">
           Skip to content
         </a>
       
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Franke-Wolfe
+              Frank-Wolfe
             
           </span>
         </div>
@@ -345,7 +345,7 @@
           
   
   <span class="md-ellipsis">
-    Franke-Wolfe
+    Frank-Wolfe
   </span>
   
 
@@ -356,7 +356,7 @@
         
   
   <span class="md-ellipsis">
-    Franke-Wolfe
+    Frank-Wolfe
   </span>
   
 
@@ -591,7 +591,7 @@
     
     
     
-      <a href="../../tags/#franke-wolfe" class="md-tag">franke-wolfe</a>
+      <a href="../../tags/#frank-wolfe" class="md-tag">frank-wolfe</a>
     
   
     
@@ -616,7 +616,7 @@
 
 
   
-    <a href="https://github.com/OptWiki/site/edit/main/docs/algorithm/franke-wolfe.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/OptWiki/site/edit/main/docs/algorithm/frank-wolfe.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -624,7 +624,7 @@
   
 
 
-<h1 id="franke-wolfe">Franke-Wolfe<a class="headerlink" href="#franke-wolfe" title="Permanent link">&para;</a></h1>
+<h1 id="frank-wolfe">Frank-Wolfe<a class="headerlink" href="#frank-wolfe" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Note from Editors</p>
 <p>This article has been flagged as incomplete for the following:</p>
@@ -640,7 +640,7 @@
 <div class="arithmatex">\[
     \mathsf{\underset{x \in \mathcal{C}}{min} \ f(x).}
 \]</div>
-<p>Franke-Wolfe is an iterative scheme for solving this problem with update <span class="arithmatex">\(\mathsf{x^{k+1}}\)</span> defined by </p>
+<p>Frank-Wolfe is an iterative scheme for solving this problem with update <span class="arithmatex">\(\mathsf{x^{k+1}}\)</span> defined by </p>
 <div class="arithmatex">\[\begin{aligned}
     \mathsf{s^{k+1}} &amp; \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \ \left&lt; \nabla f(x^k),\  x \right&gt;, } \\
     \mathsf{x^{k+1}} &amp; \mathsf{\triangleq x^k + \alpha_k \left( s^k - x^k \right),}
@@ -673,7 +673,7 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">def</span> <span class="nf">get_fw_solution</span><span class="p">(</span><span class="n">gradf</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">num_iters</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute Franke-Wolfe solution</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute Frank-Wolfe solution</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">        args:</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sd">            gradf: gradient operator for objective</span>
@@ -697,7 +697,7 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">def</span> <span class="nf">get_fw_solution</span><span class="p">(</span><span class="n">gradf</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">num_iters</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute Franke-Wolfe solution</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute Frank-Wolfe solution</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="sd">        args:</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="sd">            gradf: gradient operator for objective</span>
@@ -737,7 +737,7 @@
 <p>Here <span class="arithmatex">\(\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.\)</span>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
-<p>Frank, F., Wolfe, P. <em>An algorithm for quadratic programming</em>. Naval Research Logistics Quarterly. 1956.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>Frank, M., Wolfe, P. <em>An algorithm for quadratic programming</em>. Naval Research Logistics Quarterly. 1956.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:1">
 <p>Jaggi, M. <em>Revisiting Frank-Wolfe: Projection-Free Sparse Convex Optimization.</em> ICML. 2013.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 4 in the text">&#8617;</a></p>
@@ -756,7 +756,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 5, 2023</span>
       
     
   </small>
