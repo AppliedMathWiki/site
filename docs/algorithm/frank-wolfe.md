@@ -32,8 +32,8 @@ Frank-Wolfe is an iterative scheme for solving this problem with update $\mathsf
 [^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
 
 \begin{aligned}
-    \mathsf{s^{k}} & \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \ \left< \nabla f(x^k),\  x \right>, } \\
-    \mathsf{x^{k+1}} & \mathsf{\triangleq x^k + \alpha_k \left( s^k - x^k \right),}
+    \mathsf{s^{k+1}} & \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \ \left< \nabla f(x^k),\  x \right>, } \\
+    \mathsf{x^{k+1}} & \mathsf{\triangleq x^k + \alpha_k \left( s^{k+1} - x^k \right),}
 \end{aligned}
 
 with a step size rule typically given by either
