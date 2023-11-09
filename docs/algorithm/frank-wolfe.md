@@ -40,7 +40,7 @@ Frank-Wolfe is an iterative scheme for solving this problem with update $\mathsf
 with a step size rule typically given by either
 
 $$
-\mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right).}
+\mathsf{\alpha_k = \dfrac{2}{k+2} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right).}
 $$
 
 ## Overview
@@ -49,6 +49,19 @@ The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iter
 
 [^6]: Frank, M., Wolfe, P. _An algorithm for quadratic programming_. Naval Research Logistics Quarterly. 1956.
 
+
+
+## Illustration
+
+Consider the problem
+
+$$\mathsf{\min_{x \in \mathbb{R}^2} \dfrac{1}{2} \left\|x-\left[\begin{array}{c} 6 \\ 6\end{array}\right] \right\|^2 \ \ \mbox{s.t.}\ \ \left[\begin{array}{cc}2 & 1 \\ -4 & 5 \\ 1 & -2\end{array}\right]x \leq \left[\begin{array}{c} 20 \\ 10 \\ 2 \end{array}\right]},\ \ x\geq 0.$$
+
+Letting the set of feasible solutions be denoted by $\mathcal{C}$, below is an illustration of applying Frank-Wolfe with step-size $\mathsf{\alpha_k = 2 / (k + 2)}.$
+
+![grahpic-fw](../assets/images/graphic-fw.gif)
+
+ 
 ## Properties
 
 **Convergence Theorem**[^1] 
@@ -80,69 +93,62 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
 
 [^3]: Use Taylor's theorem or something...
 
-## Illustration
-
-Consider the problem
-
-$$\mathsf{\min_{x \in \mathbb{R}_{\geq 0}^2} \dfrac{\|x-(6,6)\|^2}{2} \ \ \mbox{s.t.}\ \ \left[\begin{array}{cc}2 & 1 \\ -4 & 5 \\ 1 & -2\end{array}\right]x \leq \left[\begin{array}{c} 20 \\ 10 \\ 2 \end{array}\right]}.$$
-
-Letting the set of feasible solutions be denoted by $\mathcal{C}$, below is an illustration of applying Frank-Wolfe with step-size $\mathsf{\alpha_k = 2 / (k + 2)}.$
-
-![grahpic-fw](../assets/images/graphic-fw.gif)
-
-
 ## Code
 
-=== "Python (Linear Constraint)"
+=== "Python (Linear Constraints)"
 
     ``` python
-    # Constraint: C = { x : A * x = b }
-    A = np.randn(100, 5)
-    b = np.randn(5, 1)
+        from scipy.optimize import linprog
+        import numpy as np 
 
-    def get_fw_solution(gradf, A, b, num_iters=100):
-        """ Compute Frank-Wolfe solution
-
-            args:
-                gradf: gradient operator for objective
-                A:     matrix defining linear constraint
-                b:     vector defining linear constraint
-
-            returns:
-              x: solution estimate
-        """
-        x = init # find a feasible point
-
-        for _ in range(num_iters):
-            x = x - grad_f(x)
-        
-        return x
+        def frankWolfe(grad, x_init, A_eq, b_eq, A_ineq, b_ineq,
+                       bnds, tol=1.0e-6):
+        ''' Minimize function subject to inequality constraints
+            
+            Args:
+                grad:   function for gradient of cost 
+                x_init: initial estimate
+                A_eq:   matrix for equality constraint
+                b_eq:   vector for equality constraint
+                A_ineq: matrix for inequality constraint
+                b_ineq: vector for inequality constraint  
+                bnds:   box constraint bounds   
+            Returns:
+                x: solution estimate
+        '''
+        k = 1.0  
+        x = x_init.copy() 
+        converge = False
+        while not converge: 
+            c   = grad(x).transpose()
+            opt = linprog(c=c, A_ub=A_ineq, b_ub=b_ineq,
+                          A_eq=A_eq, b_eq=b_eq, bounds=bnds)
+            s     = np.reshape(opt.x, x.shape)
+            alpha = 2.0 / (k + 2.0)
+            step  = alpha * (s - x)              
+            x    += step
+            k    += 1.0
+            converge = np.linalg.norm(step) <= tol 
+        return x   
     ```
-=== "Python (Ellipsoid Constraint)"
+=== "Python (Illustration)"
 
     ``` python
-    # Constraint: C = { x : A * x = b }
-    A = np.randn(100, 5)
-    b = np.randn(5, 1)
-
-    def get_fw_solution(gradf, A, b, num_iters=100):
-        """ Compute Frank-Wolfe solution
-
-            args:
-                gradf: gradient operator for objective
-                A:     matrix defining linear constraint
-                b:     vector defining linear constraint
-
-            returns:
-              x: solution estimate
-        """
-        x = init # find a feasible point
-
-        for _ in range(num_iters):
-            x = x - grad_f(x)
         
-        return x
-    ```         
+        lhs_ineq = [[ 2,  1], [-4,  5], [1, -2]]  
+        rhs_ineq = [20, 10, 2]
+        bnd      = [(0, float("inf")), (0, float("inf"))]
+        ref      = np.array([[6.0], [1.0]])
+        x_init   = np.array([[2.0], [2.0]])
+        
+        def grad(x):
+            """ Compute gradient of 0.5 * || x - ref || ** 2
+            """
+            return x - ref
+        
+        sol = frankWolfe(grad, x_init, None, lhs_ineq, None,
+                         rhs_ineq, bnd)
+    ```     
 
 ## Applications
 
