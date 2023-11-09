@@ -392,15 +392,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
+  <a href="#illustration" class="md-nav__link">
+    Illustration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#illustration" class="md-nav__link">
-    Illustration
+  <a href="#properties" class="md-nav__link">
+    Properties
   </a>
   
 </li>
@@ -546,15 +546,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
+  <a href="#illustration" class="md-nav__link">
+    Illustration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#illustration" class="md-nav__link">
-    Illustration
+  <a href="#properties" class="md-nav__link">
+    Properties
   </a>
   
 </li>
@@ -661,10 +661,15 @@
 \end{aligned}\]</div>
 <p>with a step size rule typically given by either</p>
 <div class="arithmatex">\[
-\mathsf{\alpha_k = \dfrac{2}{k+1} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right).}
+\mathsf{\alpha_k = \dfrac{2}{k+2} \quad {or} \quad \alpha_k = \underset{\alpha\in[0,1]}{argmin} \ f\left(x^k + \alpha (s^k - x^k)\right).}
 \]</div>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iterative first-order algorithm for solving constrained convex problems. The method was proposed by Marguerite Frank and Philip Wolfe in 1956.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">3</a></sup> Each update minimimizes the linearization of <span class="arithmatex">\(\mathsf{f}\)</span> about <span class="arithmatex">\(\mathsf{x^k}\)</span> over the domain <span class="arithmatex">\(\mathcal{C}\)</span>. This ensures each iteration is feasible. Several standard convergence properties hold for FW and its variants.</p>
+<h2 id="illustration">Illustration<a class="headerlink" href="#illustration" title="Permanent link">&para;</a></h2>
+<p>Consider the problem</p>
+<div class="arithmatex">\[\mathsf{\min_{x \in \mathbb{R}^2} \dfrac{1}{2} \left\|x-\left[\begin{array}{c} 6 \\ 6\end{array}\right] \right\|^2 \ \ \mbox{s.t.}\ \ \left[\begin{array}{cc}2 &amp; 1 \\ -4 &amp; 5 \\ 1 &amp; -2\end{array}\right]x \leq \left[\begin{array}{c} 20 \\ 10 \\ 2 \end{array}\right]},\ \ x\geq 0.\]</div>
+<p>Letting the set of feasible solutions be denoted by <span class="arithmatex">\(\mathcal{C}\)</span>, below is an illustration of applying Frank-Wolfe with step-size <span class="arithmatex">\(\mathsf{\alpha_k = 2 / (k + 2)}.\)</span></p>
+<p><img alt="grahpic-fw" src="../../assets/images/graphic-fw.gif" /></p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <p><strong>Convergence Theorem</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">4</a></sup> </p>
 <p>If <span class="arithmatex">\(\mathsf{f}\)</span> is convex and Lipschitz differentiable over a convex and compact set <span class="arithmatex">\(\mathcal{C}\)</span>, then there is a constant <span class="arithmatex">\(\mathsf{C&gt; 0}\)</span> such that</p>
@@ -678,60 +683,58 @@
 <p>Can rescale or re-jigger coordinates without any change in outcomes.</p>
 <p><strong>Feasible + Projection-Free</strong></p>
 <p>No projections needed if <span class="arithmatex">\(\mathsf{x^1 \in \mathcal{C}.}\)</span></p>
-<h2 id="illustration">Illustration<a class="headerlink" href="#illustration" title="Permanent link">&para;</a></h2>
-<p>Consider the problem</p>
-<div class="arithmatex">\[\mathsf{\min_{x \in \mathbb{R}_{\geq 0}^2} \dfrac{\|x-(6,6)\|^2}{2} \ \ \mbox{s.t.}\ \ \left[\begin{array}{cc}2 &amp; 1 \\ -4 &amp; 5 \\ 1 &amp; -2\end{array}\right]x \leq \left[\begin{array}{c} 20 \\ 10 \\ 2 \end{array}\right]}.\]</div>
-<p>Letting the set of feasible solutions be denoted by <span class="arithmatex">\(\mathcal{C}\)</span>, below is an illustration of applying Frank-Wolfe with step-size <span class="arithmatex">\(\mathsf{\alpha_k = 2 / (k + 2)}.\)</span></p>
-<p><img alt="grahpic-fw" src="../../assets/images/graphic-fw.gif" /></p>
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python (Linear Constraint)</label><label for="__tabbed_1_2">Python (Ellipsoid Constraint)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python (Linear Constraints)</label><label for="__tabbed_1_2">Python (Illustration)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Constraint: C = { x : A * x = b }</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">def</span> <span class="nf">get_fw_solution</span><span class="p">(</span><span class="n">gradf</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">num_iters</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute Frank-Wolfe solution</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">linprog</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">def</span> <span class="nf">frankWolfe</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="n">A_eq</span><span class="p">,</span> <span class="n">b_eq</span><span class="p">,</span> <span class="n">A_ineq</span><span class="p">,</span> <span class="n">b_ineq</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                   <span class="n">bnds</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1.0e-6</span><span class="p">):</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="sd">&#39;&#39;&#39; Minimize function subject to inequality constraints</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">        args:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sd">            gradf: gradient operator for objective</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sd">            A:     matrix defining linear constraint</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="sd">            b:     vector defining linear constraint</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="sd">        returns:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="sd">          x: solution estimate</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">init</span> <span class="c1"># find a feasible point</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iters</span><span class="p">):</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">grad_f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="k">return</span> <span class="n">x</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">        Args:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sd">            grad:   function for gradient of cost </span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sd">            x_init: initial estimate</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="sd">            A_eq:   matrix for equality constraint</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="sd">            b_eq:   vector for equality constraint</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="sd">            A_ineq: matrix for inequality constraint</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="sd">            b_ineq: vector for inequality constraint  </span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="sd">            bnds:   box constraint bounds   </span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="sd">        Returns:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="sd">            x: solution estimate</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="sd">    &#39;&#39;&#39;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">k</span> <span class="o">=</span> <span class="mf">1.0</span>  
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">x_init</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> 
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="n">converge</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="k">while</span> <span class="ow">not</span> <span class="n">converge</span><span class="p">:</span> 
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="n">c</span>   <span class="o">=</span> <span class="n">grad</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        <span class="n">opt</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A_ineq</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b_ineq</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                      <span class="n">A_eq</span><span class="o">=</span><span class="n">A_eq</span><span class="p">,</span> <span class="n">b_eq</span><span class="o">=</span><span class="n">b_eq</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bnds</span><span class="p">)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        <span class="n">s</span>     <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">opt</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        <span class="n">alpha</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">/</span> <span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="mf">2.0</span><span class="p">)</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        <span class="n">step</span>  <span class="o">=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span>              
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        <span class="n">x</span>    <span class="o">+=</span> <span class="n">step</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        <span class="n">k</span>    <span class="o">+=</span> <span class="mf">1.0</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        <span class="n">converge</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">step</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">tol</span> 
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="k">return</span> <span class="n">x</span>   
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Constraint: C = { x : A * x = b }</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">def</span> <span class="nf">get_fw_solution</span><span class="p">(</span><span class="n">gradf</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">num_iters</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute Frank-Wolfe solution</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="sd">        args:</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="sd">            gradf: gradient operator for objective</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="sd">            A:     matrix defining linear constraint</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="sd">            b:     vector defining linear constraint</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="sd">        returns:</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="sd">          x: solution estimate</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">init</span> <span class="c1"># find a feasible point</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iters</span><span class="p">):</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">grad_f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="k">return</span> <span class="n">x</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="n">lhs_ineq</span> <span class="o">=</span> <span class="p">[[</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]]</span>  
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">rhs_ineq</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">bnd</span>      <span class="o">=</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">))]</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">ref</span>      <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">6.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">]])</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">x_init</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">]])</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">def</span> <span class="nf">grad</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot; Compute gradient of 0.5 * || x - ref || ** 2</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="sd">        &quot;&quot;&quot;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">ref</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">sol</span> <span class="o">=</span> <span class="n">frankWolfe</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span> <span class="n">x_init</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">lhs_ineq</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                     <span class="n">rhs_ineq</span><span class="p">,</span> <span class="n">bnd</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
