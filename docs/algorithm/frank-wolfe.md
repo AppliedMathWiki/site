@@ -14,7 +14,6 @@ tags:
     This article has been flagged as incomplete for the following:
 
     - [ ] Incomplete / poorly formatted list of properties
-    - [ ] Incomplete code in programing examples
     - [ ] Inadequate references to applications (Section: Applications)    
     - [ ] Inadequate references to related works (Section: See Also)
 
@@ -33,7 +32,7 @@ Frank-Wolfe is an iterative scheme for solving this problem with update $\mathsf
 [^4]: Here $\overline{\mathbb{R}}\triangleq \mathbb{R} \cup \infty.$
 
 \begin{aligned}
-    \mathsf{s^{k+1}} & \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \ \left< \nabla f(x^k),\  x \right>, } \\
+    \mathsf{s^{k}} & \mathsf{\triangleq \underset{x\in \mathcal{C}}{argmin} \ \left< \nabla f(x^k),\  x \right>, } \\
     \mathsf{x^{k+1}} & \mathsf{\triangleq x^k + \alpha_k \left( s^k - x^k \right),}
 \end{aligned}
 
@@ -55,7 +54,7 @@ The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iter
 
 Consider the problem
 
-$$\mathsf{\min_{x \in \mathbb{R}^2} \dfrac{1}{2} \left\|x-\left[\begin{array}{c} 6 \\ 6\end{array}\right] \right\|^2 \ \ \mbox{s.t.}\ \ \left[\begin{array}{cc}2 & 1 \\ -4 & 5 \\ 1 & -2\end{array}\right]x \leq \left[\begin{array}{c} 20 \\ 10 \\ 2 \end{array}\right]},\ \ x\geq 0.$$
+$$\mathsf{\min_{x \in \mathbb{R}^2} \dfrac{1}{2} \left\|x-\left[\begin{array}{c} \mathsf{6} \\ \mathsf{6}\end{array}\right] \right\|^2 \ \ \ \mbox{s.t.}\ \ \ \left[\begin{array}{cc} \mathsf{2} & \mathsf{1} \\ \mathsf{-4} & \mathsf{5} \\ \mathsf{1} & \mathsf{-2}\end{array}\right]x \leq \left[\begin{array}{c} \mathsf{20} \\ \mathsf{10} \\ \mathsf{2} \end{array}\right],\ \ x\geq 0.}$$
 
 Letting the set of feasible solutions be denoted by $\mathcal{C}$, below is an illustration of applying Frank-Wolfe with step-size $\mathsf{\alpha_k = 2 / (k + 2)}.$
 
