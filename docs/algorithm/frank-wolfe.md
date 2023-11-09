@@ -79,7 +79,17 @@ No projections needed if $\mathsf{x^1 \in \mathcal{C}.}$
 [^2]: Insert citations to Jaggi paper.
 
 [^3]: Use Taylor's theorem or something...
- 
+
+## Illustration
+
+Consider the problem
+
+$$\mathsf{\min_{x \in \mathbb{R}_{\geq 0}^2} \dfrac{\|x-(6,6)\|^2}{2} \ \ \mbox{s.t.}\ \ \left[\begin{array}{cc}2 & 1 \\ -4 & 5 \\ 1 & -2\end{array}\right]x \leq \left[\begin{array}{c} 20 \\ 10 \\ 2 \end{array}\right]}.$$
+
+Letting the set of feasible solutions be denoted by $\mathcal{C}$, below is an illustration of applying Frank-Wolfe with step-size $\mathsf{\alpha_k = 2 / (k + 2)}.$
+
+![grahpic-fw](../assets/images/graphic-fw.gif)
+
 
 ## Code
 
