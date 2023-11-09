@@ -44,7 +44,7 @@ $$
 
 ## Overview
 
-The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iterative first-order algorithm for solving constrained convex problems. The method was proposed by Marguerite Frank and Philip Wolfe in 1956.[^6] Each update minimimizes the linearization of $\mathsf{f}$ about $\mathsf{x^k}$ over the domain $\mathcal{C}$. This ensures each iteration is feasible. Several standard convergence properties hold for FW and its variants.
+The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iterative first-order algorithm for solving constrained convex problems. The method was proposed by Marguerite Frank and Philip Wolfe in 1956.[^6] Each update is a convex combination between the current iterate $\mathsf{x^k}$ and a minimimizer $\mathsf{s^k}$ of the linearization of $\mathsf{f}$ about $\mathsf{x^k}$ over the domain $\mathcal{C}$. This ensures each iteration is feasible. Several standard convergence properties hold for FW and its variants.
 
 [^6]: Frank, M., Wolfe, P. _An algorithm for quadratic programming_. Naval Research Logistics Quarterly. 1956.
 
@@ -54,7 +54,7 @@ The Frank–Wolfe (FW) algorithm, also called "conditional gradient", is an iter
 
 Consider the problem
 
-$$\mathsf{\min_{x \in \mathbb{R}^2} \dfrac{1}{2} \left\|x-\left[\begin{array}{c} \mathsf{6} \\ \mathsf{6}\end{array}\right] \right\|^2 \ \ \ \mbox{s.t.}\ \ \ \left[\begin{array}{cc} \mathsf{2} & \mathsf{1} \\ \mathsf{-4} & \mathsf{5} \\ \mathsf{1} & \mathsf{-2}\end{array}\right]x \leq \left[\begin{array}{c} \mathsf{20} \\ \mathsf{10} \\ \mathsf{2} \end{array}\right],\ \ x\geq 0.}$$
+$$\mathsf{\min_{x \in \mathbb{R}^2} \dfrac{1}{2} \left\|x-\left[\begin{array}{c} \mathsf{6} \\ \mathsf{1}\end{array}\right] \right\|^2 \ \ \ \mbox{s.t.}\ \ \ \left[\begin{array}{rr} \mathsf{2} & \mathsf{1} \\ \mathsf{-4} & \mathsf{5} \\ \mathsf{1} & \mathsf{-2}\end{array}\right]x \leq \left[\begin{array}{c} \mathsf{20} \\ \mathsf{10} \\ \mathsf{2} \end{array}\right],\ \ x\geq 0.}$$
 
 Letting the set of feasible solutions be denoted by $\mathcal{C}$, below is an illustration of applying Frank-Wolfe with step-size $\mathsf{\alpha_k = 2 / (k + 2)}.$
 
